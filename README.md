@@ -16,11 +16,11 @@ Add a helper in application controller:
 ```
 
 Step 2
-call helper in view where you want to change ERB code
+call helper in view where you want to change ERB code.  In this case, the JS-powered pop-up is difficult to use on a tablet, so I revert to a standard form if mobile.
 ```
 <% if mobile_device? %>
 
-<%= link_to 'new', new_bookmark_path(:refcontroller => 'home')  %>
+<%= link_to 'new', new_list_path  %>
 
 <% else %>
 
