@@ -3,12 +3,16 @@ rails_check_for_mobile_device
 
 Sometimes, you want to show view ERB specific to a device type.
 
+User agent strings is one way to do it.  See this for a reference:
+
+http://www.zytrax.com/tech/web/mobile_ids.html
+
 Step 1
 Add a helper in application controller:
 ```
   private
 
-  # http://www.zytrax.com/tech/web/mobile_ids.html - for
+
   def mobile_device?
       request.user_agent =~ /Mobile/
   end
